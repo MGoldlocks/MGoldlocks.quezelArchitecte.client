@@ -1,0 +1,3 @@
+npm install express --save
+npm install --save body-parser cors morgan
+npm install --save nodemon
