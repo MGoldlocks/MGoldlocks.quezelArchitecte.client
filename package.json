@@ -1,5 +1,5 @@
 {
-  "name": "quezelvue",
+  "name": "QuezelArchitecte",
   "version": "1.0.0",
   "description": "ls",
   "author": "tfjm5934 <mathieu.guerin@orange.com>",
@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "npm": "^6.5.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },
