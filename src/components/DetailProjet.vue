@@ -1,10 +1,28 @@
 <template>
   <div class="page-content detailProjet">
-    <h1>Détail projet {{this.$route.query.projet}}</h1>
+    <div id="page-content-header">
+      <a @click="$router.go(-1)">< Retour</a>
+      <h1>{{this.description}}</h1>
+    </div>
     <div class="text-description">
-      <div v-for="row in nbRow" class="row">
-        <div class="column">
-            <img v-for="imageName in imagesName" v-bind:key="imageName.id" v-bind:src="imageName.name">
+      <agile :arrows="true" :speed="750"
+             :autoplay="true" :pauseOnHover="false">
+        <div v-for="image in images">
+          <div v-bind:class="image.name"><h3>{{image.title}}</h3></div>
+        </div>
+      </agile>
+      <div id="detailProjet-description">
+        <div>
+        {{this.date}}
+        </div>
+        <div>
+          {{this.master}}
+        </div>
+        <div>
+          {{this.location}}
+        </div>
+        <div>
+          {{this.mission}}
         </div>
 
       </div>
@@ -18,15 +36,38 @@
       data() {
           switch (this.$route.query.projet) {
               case "AQL":
-                  console.log("lala")
+                  console.log("AQL")
                   return {
-                      nbRow:1,
-                      imagesName: [
-                          {name: require("./../assets/img/AmenagementInterieur/im01.png"), id: "im01"},
-                          {name: require("./../assets/img/AmenagementInterieur/im02.png"), id: "im02"},
-                          {name: require("./../assets/img/AmenagementInterieur/im03.png"), id: "im03"},
-                          {name: require("./../assets/img/AmenagementInterieur/im04.png"), id: "im04"}],
-                      description: "Projet de SDB AQL"
+                      images: [
+                          {name: "slide slideAQL1", id: "im01", title: "Réalisation"},
+                          {name: "slide slideAQL2", id: "im02", title: "Réalisation"},
+                          {name: "slide slideAQL3", id: "im03", title: "Réalisation"},
+                          {name: "slide slideAQL4", id: "im04", title: "Réalisation"},
+                          {name: "slide slideAQL5", id: "im05", title: "Existant"},
+                          {name: "slide slideAQL6", id: "im06", title: "Existant"},
+                          {name: "slide slideAQL7", id: "im07", title: "Existant"},
+                          {name: "slide slideAQL8", id: "im08", title: "Existant"}],
+                      description: "Aménagement d'une salle de bain",
+                      date: "Date: Décembre 2017 - Mars 2018",
+                      master: "Maître d'ouvrage: Privé",
+                      location: "Lieu: Passy 74190",
+                      mission: "Missions confiées: ESQ / APD / PRO / DET"
+                  }
+              case "RDN":
+                  console.log("RDN")
+                  return {
+                      images: [
+                          {name: "slide slideRDN1", id: "im01", title: "Réalisation"},
+                          {name: "slide slideRDN2", id: "im02", title: "Réalisation"},
+                          {name: "slide slideRDN3", id: "im03", title: "Réalisation"},
+                          {name: "slide slideRDN4", id: "im04", title: "Réalisation"},
+                          {name: "slide slideRDN5", id: "im05", title: "Existant"},
+                          {name: "slide slideRDN6", id: "im06", title: "Existant"}],
+                      description: "Extension d'une maison individuelle",
+                      date: "Date: Novembre 2018 - Janvier 2019",
+                      master: "Maître d'ouvrage: Privé",
+                      location: "Lieu: Passy 74190",
+                      mission: "Missions confiées: ESQ / APD / PC / PRO"
                   }
           }
       }

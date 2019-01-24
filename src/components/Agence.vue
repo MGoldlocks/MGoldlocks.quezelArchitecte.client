@@ -126,7 +126,15 @@
       <div class="separator-vue"></div>
     </div>
 
-    <a href="https://annuaire.architectes.org/?region_slug=auvergne-rhone-alpes/">Annuaire des architectes</a>
+    <div>
+      Horaires d’ouverture de l’agence<br>
+
+      Du lundi au vendredi<br>
+
+      De 8h00 à 18h00<br><br><br><br>
+    </div>
+
+    <a href="https://annuaire.architectes.org/?region_slug=auvergne-rhone-alpes/" target="_blank">Ordre Des Architectes</a>
 
   </div>
 
