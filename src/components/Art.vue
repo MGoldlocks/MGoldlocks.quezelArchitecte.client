@@ -2,7 +2,7 @@
   <div class="page-content art">
     <h1>Art</h1>
     <div class="text-description">
-      En construction...
+      A venir bientôt...
     </div>
   </div>
 </template>

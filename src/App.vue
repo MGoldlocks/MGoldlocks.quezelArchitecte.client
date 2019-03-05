@@ -33,7 +33,8 @@
     <router-view/>
     <div id="quezel-social-links" class="round">
       <a class="facebook" rel="external" title="Quezel Architecte sur Facebook"
-         href="https://www.facebook.com/quezel.architecte"><img src="./assets/img/facebook_circle-512.png"></a>
+         href="https://www.facebook.com/quezel.architecte">
+        <img src="./assets/img/facebook_circle-512.png"></a>
     </div>
     <div id="quezel-bottom-page">
       QUEZEL ARCHITECTE<br>
@@ -251,6 +252,7 @@ li.dropdown.selected {
   max-width: 100%;
   padding: 0 1%;
 }
+
 .column {
   a {
     display: inline-block;
@@ -366,8 +368,8 @@ li.dropdown.selected {
   }
 
   .agile .agile__arrow {
-    height: 100%;
-    top: 0;
+    height: calc(100% - 32px);
+    top: 32px;
     width: 50px
   }
 
@@ -403,18 +405,15 @@ li.dropdown.selected {
 
   .agile .slide {
 
-    background-size: contain;
+    //background-size: contain;
     background-repeat: no-repeat;
     color: #fff;
     background-position: 50%;
-    //background-size: cover;
+    background-size: cover;
     position: relative;
     height: 28em;
     &.redirect {
       cursor: pointer;
-      &:hover {
-        border: 1px solid black;
-      }
     }
   }
 
@@ -423,14 +422,21 @@ li.dropdown.selected {
       height: 450px;
     }
   }
-  .slide h3 {
-    font-size: 32px;
-    font-weight: 300;
-    left: 50%;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%)
+
+  .slide {
+    div.project-description {
+      color: black;
+      text-align: center;
+      width: 100%;
+      position: absolute;
+      z-index: 10;
+      opacity: 0.6;
+      background-color: whitesmoke;
+      h3 {
+        opacity: 0.7;
+        margin: 6px;
+      }
+    }
   }
 
   @media (min-width:756px) {
@@ -482,27 +488,27 @@ li.dropdown.selected {
   }
 
 .slideRDN1 {
-  background-image: url(assets/img/AmenagementInterieur/RDN/rdn1.jpg)
+  background-image: url(assets/img/Renovation/RDN/rdn1.jpg)
 }
 
 .slideRDN2 {
-  background-image: url(assets/img/AmenagementInterieur/RDN/rdn2.jpg)
+  background-image: url(assets/img/Renovation/RDN/rdn2.jpg)
 }
 
 .slideRDN3 {
-  background-image: url(assets/img/AmenagementInterieur/RDN/rdn3.jpg)
+  background-image: url(assets/img/Renovation/RDN/rdn3.jpg)
 }
 
 .slideRDN4 {
-  background-image: url(assets/img/AmenagementInterieur/RDN/rdn4.jpg)
+  background-image: url(assets/img/Renovation/RDN/rdn4.jpg)
 }
 
 .slideRDN5 {
-  background-image: url(assets/img/AmenagementInterieur/RDN/rdn5.jpg)
+  background-image: url(assets/img/Renovation/RDN/rdn5.jpg)
 }
 
 .slideRDN6 {
-  background-image: url(assets/img/AmenagementInterieur/RDN/rdn6.jpg)
+  background-image: url(assets/img/Renovation/RDN/rdn6.jpg)
 }
 
 

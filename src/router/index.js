@@ -33,6 +33,24 @@ export default new Router({
             ]
         }
     },
+      {
+          path: '*',
+          name: 'Accueil',
+          component: Accueil,
+          meta: {
+              title: 'Accueil',
+              metaTags: [
+                  {
+                      name: 'description',
+                      content: "Résumé des projets de Quezel Architecte à Passy et dans la vallée de l'Arve."
+                  },
+                  {
+                      property: 'og:description',
+                      content: "Résumé des projets de Quezel Architecte à Passy et dans la vallée de l'Arve."
+                  }
+              ]
+          }
+      },
     {
         path: '/Agence',
         name: 'Agence',
@@ -177,6 +195,6 @@ export default new Router({
             ]
         }
     }
-  ],
+    ],
   mode: 'history'
 })

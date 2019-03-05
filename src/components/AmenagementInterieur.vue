@@ -12,22 +12,13 @@
             <img @load="setheight" :style="{ height: imageHeight + 'px' }" src="../assets/img/AmenagementInterieur/AQL/im01.jpg">
           </router-link>
         </div>
-        <div class="column clickable">
-          <router-link to="/DetailProjet?projet=RDN">
-            <div class="project-description">
-              <h3>Projet RDN</h3>
-              <i>Extension d'une maison individuelle</i>
-            </div>
-            <img @load="setheight" :style="{ height: imageHeight + 'px' }" src="../assets/img/AmenagementInterieur/RDN/rdn1.jpg">
-          </router-link>
-        </div>
+
       </div>
     </div>
   </div>
 </template>
 
 <script>
-
     const methods = ({
         setheight(event) {
             console.log("setheight")
